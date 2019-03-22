@@ -1,28 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <input type="text" v-model="name"/>
+    <p>私は{{ name }}です</p>
+    <p v-once>{{ name }}は大変です。</p>
+    <!-- v-onceをつけると反映されない -->
+    <div v-html="htmlData"/>
+    <!-- v-htmlをつけるとHTMLを挿入できる -->
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      name: 'エンジニア',
+      htmlData: `<b><font color="red">私の名前はエンジニアです</font></b>`
+      // HTML挿入
+    }
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
