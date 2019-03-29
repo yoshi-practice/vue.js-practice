@@ -2,6 +2,38 @@
 
 > A Vue.js project
 
+---
+
+## 開発手順
+
+### Vue-CLIをグローバルインストール
+
+```
+$ npm i -g vue-cli
+```
+
+### プロジェクト作成
+
+```
+$ vue init webpack-simple <PROJECT_NAME>
+$ cd <PROJECT_NAME>
+$ npm i
+```
+
+### 立ち上げ
+
+```
+$ npm run dev
+```
+
+### Vue-Routerをインストール
+
+```
+$ npm i -S vue-router
+```
+
+---
+
 ## Build Setup
 
 ``` bash
