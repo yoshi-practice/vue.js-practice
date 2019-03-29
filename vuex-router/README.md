@@ -36,19 +36,19 @@ $ npm i -S vue-router
 
 ```
 import Vue from 'vue';
-import VueRouter from 'vue-router';
+import VueRouter from 'vue-router';    // VueRouterをインポート
 import App from './App.vue';
-import { routes } from './routes';
+import { routes } from './routes';    // routes.jsをインポート(ルート情報を書き込むファイル)
 
-Vue.use(VueRouter);
+Vue.use(VueRouter);    // VueRouterをVueのミドルウェアとして使用する宣言
 
 const router = new VueRouter({
   routes
-});
+});    // routes.jsの情報をVueRouterに入れる
 
 new Vue({
   el: '#app',
-  router,
+  router,    // Vueをインスタンス化する際にrouterを渡す
   render: h => h(App)
 })
 ```
